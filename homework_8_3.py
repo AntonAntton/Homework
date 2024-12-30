@@ -11,6 +11,6 @@ def find_unique_value(my_list):
         return "More than one or none unique number found"
 
 
-my_list = list(map(str, input("Enter your numbers(e.g. 1,2..): ").split(",")))
+my_list = list(input("Enter your numbers(e.g. 1,2..): ").split(","))
 print(find_unique_value(my_list))
 
