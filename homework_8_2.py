@@ -3,5 +3,4 @@ def is_palindrome(text):
 
 
 my_text = input("Enter your text: ")
-
 print(is_palindrome(my_text))
