@@ -23,8 +23,6 @@ def first_word():
         if not words:
             words = [my_text]
 
-    print(f"Words after split: {words}")
-
     # Повертаємо перше слово з розділеного тексту.
     return words[0] if words else "No words found"
 
