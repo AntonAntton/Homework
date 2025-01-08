@@ -1,8 +1,8 @@
 def difference():
-    # Запрос від користувача
+    # Запит від користувача
     my_numbers = input("Enter numbers: ").split(",")
 
-    # Перетворюємо запрос на ліст з цілими числами
+    # Перетворюємо запит на ліст з цілими числами
     my_numbers = [int(num) for num in my_numbers]
 
     print("User numbers:", my_numbers)
