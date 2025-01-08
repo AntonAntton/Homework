@@ -13,7 +13,7 @@ def popular_words(text, words):
 input_text = input("Enter your text: ")
 input_words = input("Enter your words: ").split(",")
 
-#Визиваємо функцію popular_words і рахуємо слова
+# Визиваємо функцію popular_words і рахуємо слова
 word_count = popular_words(input_text, input_words)
 
 # Роздруковуємо результат
