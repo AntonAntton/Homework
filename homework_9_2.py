@@ -1,25 +1,27 @@
-def difference():
+def difference(*args):
     """
     Знаходимо різницю між максимальним і мінімальним значенням з лісту значень 
     Параметри: 
-    my_numbers(list): ліст з значеннями int або float
+    *args: Невизначена кількість значень int або float
     Повертаємо: 
     Різниця між максимальним і мінімальним значенням int чи float
     """
-    # Запит від користувача
-    my_numbers = input("Enter numbers: ").split(",")
+    # Перевіряємо, чи є передані аргументи
+    if not args:
+        print("No numbers provided.")
+        return
 
-    # Перетворюємо запит на ліст з числами (int або float)
+    # Перетворюємо аргументи на числа (int або float)
     def parse_number(num):
-        return int(num) if num.isdigit() else float(num)
+        return int(num) if isinstance(num, str) and num.isdigit() else float(num)
 
-    my_numbers = [parse_number(num) for num in my_numbers]
-    
-    print("User numbers:", my_numbers)
+    numbers = [parse_number(num) for num in args]
+
+    print("User numbers:", numbers)
 
     # Знаходимо максимальне і мінімальне значення
-    max_val = max(my_numbers)
-    min_val = min(my_numbers)
+    max_val = max(numbers)
+    min_val = min(numbers)
 
     # Розраховуємо різницю
     diff = max_val - min_val
@@ -28,4 +30,6 @@ def difference():
     print("Minimum:", min_val)
     print("Difference:", diff)
 
-difference()
+# Введення користувача
+user_input = input("Enter numbers separated by commas: ").split(",")
+difference(*user_input)
