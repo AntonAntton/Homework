@@ -13,7 +13,7 @@ def difference(*args):
 
     # Перетворюємо аргументи на числа (int або float)
     def parse_number(num):
-        return int(num) if isinstance(num, str) and num.isdigit() else float(num)
+        return int(num) if num.isdigit() else float(num)
 
     numbers = [parse_number(num) for num in args]
 
