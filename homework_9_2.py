@@ -24,7 +24,7 @@ def difference(*args):
     min_val = min(numbers)
 
     # Розраховуємо різницю
-    diff = max_val - min_val
+    diff = round(max_val - min_val, 1)
 
     print("Maximum:", max_val)
     print("Minimum:", min_val)
