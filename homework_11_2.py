@@ -15,7 +15,7 @@ def generator_cube_numbers(start: int, end: int):
         if is_cube(current):
             yield current
         current += 1
-        if end is not None and current > end:
+        if current > end:
             break
 
 
