@@ -6,7 +6,7 @@ def is_cube(x: int) -> bool:
     return cube_root ** 3 == x
 
 
-def generator_cube_numbers(start: int = 1, end: int = None):
+def generator_cube_numbers(start: int, end: int):
     """
     Генерує цифри які є цілочисельними кубами.
     """
