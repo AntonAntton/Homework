@@ -11,14 +11,14 @@ def is_prime(x: int) -> bool:
     return True
 
 
-def prime_generator(begin: int, end: int) -> [int]:
+def prime_generator(end: int) -> [int]:
     """Генерує прості числа в межі [2, end]."""
-    current = max(2, begin)
+    current = 2
     while current <= end:
         if is_prime(current):  # Перевірка чи число є простим
             yield current  # Отримаємо число
         current += 1  # Рухаємося до наступного числа
 
 
-gen = prime_generator(2, 29)
+gen = prime_generator(29)
 print(list(gen))
