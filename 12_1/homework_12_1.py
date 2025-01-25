@@ -31,6 +31,7 @@ def delete_html_tags(html_file: str, result_file: str = 'cleaned.txt') -> None:
     # Запис очищеного тексту у вихідний файл
     with codecs.open(result_file, 'w', 'utf-8') as file:
         file.write(clean_text)
+        
 
 # Приклад використання
 delete_html_tags('draft.html', 'output.txt')
