@@ -108,7 +108,7 @@ try:
     for student in students:
         gr.add_student(student)
     gr.add_student(st1)
-    gr.add_student(st2)  # Це має викликати виключення
+    gr.add_student(st2)
 except GroupLimitException as e:
     print(f"Error: {e}")
 
